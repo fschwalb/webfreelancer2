@@ -1,0 +1,347 @@
+
+/** FUENTES **/
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Roboto:wght@100;400;700&display=swap');
+
+
+/** VARIABLES **/
+
+:root {
+    --color1: #00c0ca;
+    --color2: #50232e;
+    --color3: #ce5f2d;
+    --color4: #f9b966;
+    --color5: #fbe083;
+    --color6: #00eeff;
+    --colorbg: #eeeeee;
+    --blancoCustom: #fafafa;
+    --negroCustom: #222831;
+    --grisCustom: #393E46;
+    --grisCustom2: #868686fa;
+
+    --fuentePrim: 'Lato', sans-serif;
+    --fuenteSec: 'Open Sans', sans-serif;
+    --fuenteThird: 'Roboto', sans-serif;
+}
+
+/** GLOBALES **/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;    
+    background-color: var(--colorbg);
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    font-family: var(--fuenteSec);
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+.contenedor {
+    width: min(90%, 120rem);
+    margin: 0 auto;
+}
+a {
+    text-decoration: none;
+}
+h1, h2, h3, h4 {
+    font-family: var(--fuentePrim);
+    line-height: 1.2;
+}
+h1 {
+    font-size: 4.8rem;
+}
+h2 {
+    font-size: 4rem;
+}
+h3 {
+    font-size: 3.2rem;
+}
+h4 {
+    font-size: 2.8rem;
+}
+p {
+    color: var(--negroCustom);
+}
+img {
+    width: 40%;
+    margin-top: 3rem;
+}
+
+/** UTILIDADES **/
+
+.no-margin {
+    margin: 0;
+}
+.no-padding {
+    padding: 0;
+}
+.centrar-texto {
+    text-align: center;
+}
+
+/** INICIO **/
+
+.header {
+    height: 60rem;
+    background-color: var(--negroCustom);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.header__texto {
+    text-align: center;
+    color: var(--blancoCustom);
+    margin-top: 5rem;
+}
+@media (min-width: 768px) {
+    .header__texto {
+        margin-top: 15rem;
+    }
+}
+
+.barra  {
+    padding: 4rem;
+}
+@media (min-width: 768px) {
+    .barra {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.contenedor .barra .logo {
+    font-family: var(--fuenteThird);
+    text-transform: uppercase;
+}
+
+.logo {
+    color: var(--colorbg);
+}
+
+.logo__nombre {
+    font-weight: 400;
+}
+
+.logo__bold {
+    font-weight: 900;
+}
+@media (min-width: 768px) {
+    .navegacion {
+        display: flex;
+        gap: 2rem;
+    }
+}
+
+.navegacion__enlace {
+    display: block;
+    text-align: center;
+    font-size: 1.8rem;
+    color: var(--blancoCustom);
+}
+.navegacion__enlace:hover {
+    color: var(--color6);
+    transition: all 0.5s ease;
+}
+
+.nombre {
+    font-size: 6rem;
+    color: var(--color6);
+}
+.puesto {
+    color: var(--colorbg);
+}
+
+.cont-flex {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 25px;
+}
+@media (max-width: 640px) {
+    .cont-flex {
+        display: block;
+    }
+}
+
+main article div h2 {
+    text-align: center;
+    color: var(--color1);
+}
+@media (max-width: 640px) {
+    main article div h2 {
+        font-size: 3.5rem;
+    }
+}
+.img-articulo {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    margin-bottom: 3rem;
+}
+main article div img {
+    width: 100%;
+}
+
+.btn__articulo {
+    background-color: #474747;
+    border: none;
+    color: var(--blancoCustom);
+    width: 40%;
+    display: block;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    border-radius: 1rem;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    margin: 20px auto;
+}
+.btn__articulo:hover {
+    background-color: var(--grisCustom2);
+    transition: all .3s ease;
+}
+
+
+/** SOBRE MI **/
+
+.sobremi__titulo {
+    text-align: center;
+    padding: 3rem;
+    text-transform: uppercase;
+    color: var(--color1);
+}
+
+/** FORMULARIO **/
+
+.contacto-bg {
+    background-color: var(--blancoCustom);
+    max-width: 65rem;
+    width: 70%;
+    padding: 15px;
+    margin-top: 50px;
+    box-shadow: 0px 0px 10px rgba(46, 54, 68, 0.5);
+}
+.contacto {
+    color: var(--color1);
+}
+
+.formulario {
+    margin: 0 auto;
+    width: 70%px;
+    padding: 2rem;
+}
+.campo {
+    display: flex;
+    margin-bottom: 2rem;
+}
+.campo__label {
+    flex: 0 0 9rem;
+    text-align: right;
+    padding-right: 2rem;
+}
+.campo__field {
+    flex: 1;
+    width: 100%;
+    padding: 1rem;
+}
+.campo__field--textarea {
+    height: 20rem;
+}
+.campo__field--textarea::placeholder{
+    font-family: var(--fuenteSec);
+    font-size: 1.5rem;
+}
+.btn__formulario {
+    background-color: #474747;
+    border: none;
+    color: var(--blancoCustom);
+    width: 30%;
+    display: block;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    border-radius: 1rem;
+    font-size: 1.8rem;
+    margin-top: 50px;
+    margin-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.btn__formulario:hover {
+    cursor: pointer;
+    background-color: var(--grisCustom2);
+    transition: all .3s ease;
+}
+input::placeholder {
+    font-family: var(--fuenteSec);
+    font-size: 1.5rem;    
+}
+@media (max-width: 440px) {
+
+
+
+    form .formulario {
+        width: 85%;
+        display: flex;
+        padding: 1.5rem;
+    }
+
+    .campo__label {
+        font-size: 1.3rem;
+    }
+
+    .campo__field {
+        font-size: 1.3rem;
+    }
+
+    .campo__field--textarea {
+        font-size: 1.3rem;
+    }
+
+    .nombre {
+        font-size: 5rem;
+        line-height: 7rem;
+        margin-bottom: 2rem;
+    }
+
+    .puesto {
+        font-size: 1.3rem;
+    }
+
+    .navegacion__enlace {
+        margin: 1.3rem auto;
+    }
+}
+
+/** FOOTER **/
+
+footer {
+    background-color: var(--negroCustom);
+    height: 8rem;
+    margin-top: 5rem;
+    padding: 1rem;
+}
+.copyright {
+    color: var(--blancoCustom);
+    text-align: center;
+    font-size: 1.5rem;
+}
+.bottom-redes {
+    text-align: center;
+}
+footer div a i {
+    color: var(--blancoCustom);
+    padding: 0 1rem 0 1rem;
+}
+footer div a i:hover {
+    color: var(--color6);
+    transition: all .5s ease;
+}
